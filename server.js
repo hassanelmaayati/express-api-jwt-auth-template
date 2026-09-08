@@ -23,8 +23,7 @@ const testJwtRouter = require('./controllers/test-jwt');
 // ... other middleware
 
 // Routes go here
-app.use('/test-jwt', testJwtRouter);
-
+app.get('sign-token', testJWTCtrl)
 
 app.listen(3000, () => {
   console.log('The express app is ready!');
