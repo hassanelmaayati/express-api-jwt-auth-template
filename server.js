@@ -19,8 +19,6 @@ app.use(express.json());
 app.use(logger('dev'));
 
 // Routes go here
-const 
-
 
 
 //DELETE TEST ROUTES
