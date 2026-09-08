@@ -17,15 +17,11 @@ mongoose.connection.on('connected', () => {
 app.use(cors());
 app.use(express.json());
 app.use(logger('dev'));
-// server.js
-
-// ... other requires above
-const testJwtRouter = require('./controllers/test-jwt');
-
-// ... other middleware
 
 // Routes go here
-app.get('sign-token', testJWTCtrl)
+
+app.get('/sign-token', testJWTCtrl.signToken);
+app.post('/verify-token', testJWTCtrl.verifyToken);
 
 app.listen(3000, () => {
   console.log('The express app is ready!');
