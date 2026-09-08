@@ -6,6 +6,8 @@ const mongoose = require('mongoose');
 const cors = require('cors');
 const logger = require('morgan');
 
+
+const testJWTCtrl=require('./controllers/test-jwt')
 mongoose.connect(process.env.MONGODB_URI);
 
 mongoose.connection.on('connected', () => {
