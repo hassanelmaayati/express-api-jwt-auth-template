@@ -23,7 +23,6 @@ app.use(cors());
 app.use(express.json());
 app.use(logger('dev'));
 
-// ROUTES
 
 // PUBLIC
 app.post('/auth/sign-up', authCtrl.signup);
